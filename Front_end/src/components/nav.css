@@ -1,0 +1,13 @@
+.nav-bton {
+  background-color: #7f3ef9;
+}
+body {
+  padding-top: 100px;
+}
+.link{
+  transition: 0.3s;
+}
+.link:hover {
+  transform: translateY(-3px);
+  
+}

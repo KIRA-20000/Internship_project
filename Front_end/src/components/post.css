@@ -1,0 +1,27 @@
+.sign-form {
+  border-radius: 10px;
+  border: 1px solid #eeeeee;
+  width: 50%;
+}
+label {
+  font-weight: 500;
+}
+.cont4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-icon {
+  position: relative;
+}
+.input-icon svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+  z-index: 2;
+}
+.input-icon .form-control {
+  padding-left: 38px;
+}

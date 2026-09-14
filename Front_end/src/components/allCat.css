@@ -1,0 +1,124 @@
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 40px 0 26px;
+}
+
+.category-search {
+  width: 360px;
+  max-width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.category-search .input-group-text {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-right: none;
+  color: #6b7280;
+}
+
+.category-search .form-control {
+  border: 1px solid #e5e7eb;
+  border-left: none;
+  box-shadow: none;
+  height: 52px;
+  font-size: 1.05rem;
+}
+
+.category-card {
+  border: 1px solid #e7e7e7;
+  border-radius: 18px;
+  background: #fff;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.category-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+  text-align: center;
+  padding: 22px 18px;
+}
+
+.category-card .card-text {
+  margin-top: 6px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.category-card p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.category-card .card-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  font-size: 1.7rem;
+}
+
+.tone-1 {
+  font-size: x-large;
+  color: #7c3aed;
+  background-color: #b9b3f271;
+}
+
+.tone-2 {
+  font-size: x-large;
+  color: #f93e3e;
+  background-color: #fd70705a;
+}
+
+.tone-3 {
+  font-size: x-large;
+  color: #1cb04e;
+  background-color: #1cb04d32;
+}
+
+.tone-4 {
+  font-size: x-large;
+  color: #7f3ef9;
+  background-color: #7f3ef935;
+}
+
+.tone-5 {
+  font-size: x-large;
+  color: #f9833e;
+  background-color: #f9833e4a;
+}
+
+.tone-6 {
+  font-size: x-large;
+  color: #01aaff;
+  background-color: #70fdf447;
+}
+
+@media (max-width: 991px) {
+  .search {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .category-search {
+    width: 100%;
+  }
+}

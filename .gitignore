@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# Uploaded files
+Back_end/uploads/*
+!Back_end/uploads/.gitkeep
+
+# Logs
+*.log
+
+# Build files
+dist/
+build/

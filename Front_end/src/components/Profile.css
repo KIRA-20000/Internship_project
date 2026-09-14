@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Skill,
+.App {
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.skill span {
+  display: inline-block;
+  color: #7f3ef9;
+  background-color: #eeeeff;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 11px;
+  margin-bottom: 15px;
+}
+
+.cv-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.cv-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cv-icon {
+  color: #7f3ef9;
+  font-size: 18px;
+}
+
+.cv-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1e293b;
+  margin-top: 10px;
+}
+
+.btn-download {
+  background-color: #eef2ff;
+  border: 1px solid #7f3ef9;
+  color: #7f3ef9;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-download:hover {
+  background-color: #7f3ef9;
+  color: #ffffff;
+}
+.pro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* justify-content: center; */
+  align-items: center;
+}
+#pro-icon {
+  font-size: 150px;
+}
+
+.app-heading {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.app-heading a {
+  text-decoration: none;
+}
+.all-apps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.app {
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-side {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}

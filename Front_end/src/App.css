@@ -1,0 +1,41 @@
+#home,
+#internships,
+#categories,
+#about {
+  scroll-margin-top: 150px;
+}
+.link {
+  transition: 0.3s;
+}
+.link:hover {
+  transform: translateY(-3px);
+}
+.view {
+  transition: 0.3s;
+}
+.view:hover {
+  transform: translateY(-3px);
+  text-decoration: none;
+  text-shadow: 1px 1px 0px rgba(124, 58, 237, 0.5);
+}
+.Card{
+  transition: 0.3s;
+}
+.Card:hover{
+  transform: translateY(-3px);
+}
+.page-animation {
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
