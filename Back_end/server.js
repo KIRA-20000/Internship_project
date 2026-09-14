@@ -15,6 +15,7 @@ const studentRoutes = require("./routes/studentRoutes");
 const companyRoutes = require("./routes/companyRoutes");
 const statisticsRoutes = require("./routes/statisticsRoutes");
 const newsletterRoutes = require("./routes/newsletterRoutes");
+const errorMiddleware = require("./middleware/errorMiddleware");
 const port = process.env.PORT || 5000;
 
 app.use(cors());
@@ -33,7 +34,7 @@ app.use("/api/newsletter", newsletterRoutes);
 app.get("/", (req, res) => {
     res.json({ message: "server is running" });
 });
-
+app.use(errorMiddleware);
 connectDB().then(async () => {
     try {
         await seedCategories({ closeConnection: false });
