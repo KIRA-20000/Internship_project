@@ -1,5 +1,5 @@
 const Internship = require("../models/Internship");
-
+const Internship = require("../models/Internship");
 const createInternship = async (req, res) => {
     try {
 
@@ -39,7 +39,35 @@ const createInternship = async (req, res) => {
                 message: "Please provide all required fields"
             });
         }
+if (!["Full-time", "Part-time"].includes(type)) {
+    return res.status(400).json({
+        message: "Type must be Full-time or Part-time"
+    });
+}
 
+if (isNaN(new Date(deadline).getTime())) {
+    return res.status(400).json({
+        message: "Please provide a valid deadline"
+    });
+}
+
+if (new Date(deadline) <= new Date()) {
+    return res.status(400).json({
+        message: "Deadline must be in the future"
+    });
+}
+
+if (requirements && !Array.isArray(requirements)) {
+    return res.status(400).json({
+        message: "Requirements must be an array"
+    });
+}
+
+if (skills && !Array.isArray(skills)) {
+    return res.status(400).json({
+        message: "Skills must be an array"
+    });
+}
         const internship = await Internship.create({
             title,
             description,
@@ -159,7 +187,11 @@ const getMyInternships = async (req, res) => {
 const getInternshipById = async (req, res) => {
     try {
         const { id } = req.params;
-
+if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).json({
+        message: "Invalid internship ID"
+    });
+}
         const internship = await Internship.findById(id);
 
         if (!internship) {
@@ -220,7 +252,37 @@ const updateInternship = async (req, res) => {
             skills,
             deadline
         } = req.body;
+if (type !== undefined && !["Full-time", "Part-time"].includes(type)) {
+    return res.status(400).json({
+        message: "Type must be Full-time or Part-time"
+    });
+}
 
+if (deadline !== undefined) {
+    if (isNaN(new Date(deadline).getTime())) {
+        return res.status(400).json({
+            message: "Please provide a valid deadline"
+        });
+    }
+
+    if (new Date(deadline) <= new Date()) {
+        return res.status(400).json({
+            message: "Deadline must be in the future"
+        });
+    }
+}
+
+if (requirements !== undefined && !Array.isArray(requirements)) {
+    return res.status(400).json({
+        message: "Requirements must be an array"
+    });
+}
+
+if (skills !== undefined && !Array.isArray(skills)) {
+    return res.status(400).json({
+        message: "Skills must be an array"
+    });
+}
         internship.title = title ?? internship.title;
         internship.description = description ?? internship.description;
         internship.company = company ?? internship.company;

@@ -44,7 +44,26 @@ const updateProfile = async (req, res) => {
             aboutMe,
             location
         } = req.body;
+if (email !== undefined) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    if (!emailRegex.test(email)) {
+        return res.status(400).json({
+            message: "Please provide a valid email"
+        });
+    }
+
+    const existingUser = await User.findOne({
+        email,
+        _id: { $ne: req.user.userId }
+    });
+
+    if (existingUser) {
+        return res.status(400).json({
+            message: "Email already exists"
+        });
+    }
+}
         user.name = name ?? user.name;
         user.email = email ?? user.email;
         user.phone = phone ?? user.phone;
