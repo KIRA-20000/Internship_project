@@ -91,7 +91,7 @@ if (skills && !Array.isArray(skills)) {
         });
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"
@@ -159,7 +159,7 @@ const getInternships = async (req, res) => {
         });
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"
@@ -176,7 +176,7 @@ const getMyInternships = async (req, res) => {
             internships
         });
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"
@@ -205,7 +205,7 @@ if (!mongoose.Types.ObjectId.isValid(id)) {
         });
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"
@@ -304,7 +304,7 @@ if (skills !== undefined && !Array.isArray(skills)) {
         });
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"
@@ -340,7 +340,7 @@ const deleteInternship = async (req, res) => {
         });
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"
@@ -359,7 +359,7 @@ const getFeaturedInternships = async (req, res) => {
         });
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"

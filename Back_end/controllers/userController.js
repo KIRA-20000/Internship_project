@@ -13,7 +13,7 @@ const getProfile = async (req, res) => {
             user
         });
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"
@@ -96,7 +96,7 @@ if (email !== undefined) {
         });
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"
@@ -129,7 +129,7 @@ const uploadCV = async (req, res) => {
         });
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"
@@ -163,7 +163,7 @@ const downloadCV = async (req, res) => {
         res.sendFile(filePath);
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"

@@ -51,7 +51,7 @@ const applyForInternship = async (req, res) => {
         });
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"
@@ -77,7 +77,7 @@ const getMyApplications = async (req, res) => {
         });
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"
@@ -120,7 +120,7 @@ const getInternshipApplications = async (req, res) => {
         });
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"
@@ -173,7 +173,7 @@ const updateApplicationStatus = async (req, res) => {
         });
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"

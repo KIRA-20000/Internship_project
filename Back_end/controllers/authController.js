@@ -83,7 +83,7 @@ if (role && !["student", "company"].includes(role)) {
         });
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"
@@ -145,7 +145,7 @@ const login = async (req, res) => {
         });
 
     } catch (error) {
-        console.error(error);
+        // console.error(error);
 
         res.status(500).json({
             message: "Server error"
